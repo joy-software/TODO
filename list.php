@@ -9,7 +9,7 @@
 
 <?php
 /*Database Connection*/
- $host = 'todobd';
+ $host = 'mysql';
   $username = 'root';
   $password = 'todoappbd';
   $database = 'dbapp';
