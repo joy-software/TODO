@@ -115,7 +115,7 @@
       var new_desc=document.getElementById("txtNewItem").value;
       document.getElementById("txtNewItem").value="";
       $.ajax({
-        url:'process.php?insert_description=' + new_desc,
+        url:'./process.php?insert_description=' + new_desc,
         complete: function (response) {
           var status = JSON.parse(response.responseText);
                // console.log(response);
