@@ -34,11 +34,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `todo`
 --
 
-CREATE TABLE `todo` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT exists `todo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `description` text NOT NULL,
-  `status` tinyint(4) NOT NULL COMMENT '0 for not completed, 1 for completed, 2 for hidden',
-  `date_time` datetime NOT NULL
+  `status` tinyint(4) NOT NULL Default 0 COMMENT '0 for not completed, 1 for completed, 2 for hidden',
+  `date_time` datetime NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -52,28 +52,6 @@ INSERT INTO `todo` (`id`, `description`, `status`, `date_time`) VALUES
 (25, 'Help you track your productivity by looking back at what you have accomplished', 0, '0000-00-00 00:00:00'),
 (26, 'Help you to do your time-sheet when you wait until Monday to do it and forgot everything you worked on', 0, '0000-00-00 00:00:00'),
 (27, 'Keep track of phone calls that need to be made/returned', 0, '0000-00-00 00:00:00'),
-(32, 'Make it easy to delegate tasks to others', 0, '0000-00-00 00:00:00'),
-(36, 'Insert your own item, try editing and delete', 0, '0000-00-00 00:00:00');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `todo`
---
-ALTER TABLE `todo`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `todo`
---
-ALTER TABLE `todo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+(32, 'Make it easy to delegate tasks to others', 0, '0000-00-00 00:00:00');
+INSERT INTO `todo` (`description`) VALUES
+( 'Insert your own item, try editing and delete')
