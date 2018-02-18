@@ -9,12 +9,12 @@
 
 <?php
 /*Database Connection*/
- $host = 'mysql';
+ $host = 'todobd';
   $username = 'root';
   $password = 'todoappbd';
   $database = 'dbapp';
   Global $dbconfig;// to use globally
-$dbconfig = mysqli_connect($username,$password,$database) or die("An Error occured while connecting to the database");
+$dbconfig = mysqli_connect($host,$username,$password,$database) or die("An Error occured while connecting to the database");
 ?>
 
 <?php 
