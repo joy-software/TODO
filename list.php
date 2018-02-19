@@ -9,8 +9,8 @@
 
 <?php
 /*Database Connection*/
- $host = 'mysql';
-  $username = 'root';
+ $host = 'db';
+  $username = 'todo';
   $password = 'todoappbd';
   $database = 'dbapp';
   Global $dbconfig;// to use globally
