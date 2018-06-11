@@ -23,7 +23,7 @@ $database = 'dm';//change database name as yours
 Global $dbconfig;
 $dbconfig = mysqli_connect($host,$username,$password,$database) or die("An Error occured while connecting to the database");
 ```
-If you want to change table name ,replace the text todo in both process.php and list.php
+If you want to change table name ,replace the text todo in both **process.php** and **list.php**
 ```
 $result=mysqli_query($dbconfig,"SELECT * FROM todo");
 ```
@@ -31,5 +31,5 @@ $result=mysqli_query($dbconfig,"SELECT * FROM todo");
 Run the project on your browser.. http://localhost/TODO
 
 ### DEMO
-http://projects.psuresh.com.np/TODO/
+https://todo-cloud.herokuapp.com/
 
